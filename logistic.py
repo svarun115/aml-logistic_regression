@@ -43,26 +43,28 @@ y_train=[y_train]
 
 
 w=np.zeros(7)
-x_train=np.array(x_train)
-y_train=np.array(y_train)
-y_train=y_train.transpose()
+#x_train=np.mat(x_train)
+y_train=np.mat(y_train)
+y_train=np.transpose(y_train)
 
 ############################################## IMPLEMENTIING LOGISTIC REGRESSION ################################################
 
-w=[w.tolist()]
-w=np.array(w)
+#w=[w.tolist()]
+#print x_train
+
+w=np.mat(w)
 alpha=0.01
 
-#print w.shape
+print w.shape
 #print x_train.shape
 
 for i in x_train:
-	i=[i]
-	i=np.array(i)
-	print i
-	print i.shape
-	print w
-	print w.shape
+	#i=[i]
+	i=np.mat(i)
+	#print i
+	#print i.shape
+	#print w
+	#print w.shape
 	#print i.transpose().shape
 	term = i* np.transpose(w)
 	print term
